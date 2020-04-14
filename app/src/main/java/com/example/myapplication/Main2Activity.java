@@ -1,8 +1,11 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.graphics.PointF;
 import android.os.Bundle;
 
+import com.example.myapplication.data.Databasehandler;
+import com.example.myapplication.model.Patient;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -10,16 +13,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
-
+    private EditText username;
+    private EditText password;
+    private Button login;
+    private Button register;
+    private Databasehandler db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        db=new Databasehandler(this);
+
+        username=findViewById(R.id.ed1);
+        password=findViewById(R.id.ed2);
+        login=findViewById(R.id.tt2);
+        register=findViewById(R.id.tt3);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +60,30 @@ public class Main2Activity extends AppCompatActivity {
         lv2.setpointB(pointD);
         lv1.draw();
         lv2.draw();
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              Patient patient= db.login(username.getText().toString(),password.getText().toString());
+              if(patient!=null){
+                              //llll
+              }
+              else{
+
+
+              }
+
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(Main2Activity.this,Main3Activity.class));
+
+            }
+        });
     }
 
 }

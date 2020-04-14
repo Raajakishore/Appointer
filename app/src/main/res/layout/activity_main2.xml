@@ -11,16 +11,83 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
     </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="468dp"
+        android:layout_height="399dp"
+        android:layout_marginTop="408dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <include layout="@layout/content_main2" />
+
+        <!--<TextView
+            android:id="@+id/tt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="CLICK HERE"
+            android:textColor="#2196F3"
+            app:layout_constraintStart_toEndOf="@+id/tt2"
+            app:layout_constraintTop_toBottomOf="@+id/ed2" />
+    -->
+
+
+
+
+
+
+
+
+        <com.example.myapplication.LineView
+            android:id="@+id/lv2"
+            android:layout_width="156dp"
+            android:layout_height="10dp"
+            tools:ignore="MissingConstraints" />
+
+        <com.example.myapplication.LineView
+            android:id="@+id/lv1"
+            android:layout_width="150dp"
+            android:layout_height="15dp"
+            android:layout_alignEnd="@+id/textView8"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="-207dp"
+            android:layout_marginBottom="384dp"
+            android:layout_toEndOf="@+id/textView8"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/tt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/lv1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="165dp"
+            android:text="SUBMIT"
+            android:textColor="#989696"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/tt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tt2"
+            android:layout_alignEnd="@+id/lv1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="151dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="163dp"
+            android:text="SIGN UP"
+            android:textColor="#989696"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -29,5 +96,36 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="172dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="136dp"
+        android:fontFamily="@font/chewy"
+        android:text="SATHYAM"
+        android:textColor="#F84F4F"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.332"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="  SATHYAM" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

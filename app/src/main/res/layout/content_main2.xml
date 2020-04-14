@@ -45,19 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed1" />
 
-    <TextView
-        android:id="@+id/tt2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="24dp"
-        android:text="Forgot Login Details?"
-        android:textColor="#989696"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ed2" />
-
-    <TextView
+    <!--<TextView
         android:id="@+id/tt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,7 +55,7 @@
         android:textColor="#2196F3"
         app:layout_constraintStart_toEndOf="@+id/tt2"
         app:layout_constraintTop_toBottomOf="@+id/ed2" />
-
+-->
 
     <RelativeLayout
         android:layout_width="468dp"
@@ -104,6 +92,35 @@
             android:layout_marginBottom="384dp"
             android:layout_toEndOf="@+id/textView8"
             tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/tt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/lv1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="165dp"
+            android:text="SUBMIT"
+            android:textColor="#989696"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/tt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tt2"
+            android:layout_alignEnd="@+id/lv1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="151dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="163dp"
+            android:text="SIGN UP"
+            android:textColor="#989696"
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <!--        app:layout_constraintEnd_toStartOf="@+id/textView8"-->
