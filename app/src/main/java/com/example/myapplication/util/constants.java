@@ -1,9 +1,10 @@
 package com.example.myapplication.util;
 
 public class constants {
-    public static final int DATABASE_VERSION=1;
-    public static final String DATABASE_NAME="hospital";
+    public static final int DATABASE_VERSION=5;
+    public static final String DATABASE_NAME="hospy";
     public static final String TABLE_NAME="patient_details";
+    public static final String TABLE_NAME1="patient";
 
     public static final String KEY_ID ="id";
     public static final String KEY_USERNAME="UserName";

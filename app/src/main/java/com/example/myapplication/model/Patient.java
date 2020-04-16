@@ -8,13 +8,13 @@ public class Patient {
     private String address;
     private String bloodgp;
     private String gender;
-    private int age;
+    private String dob;
     private String contact;
 
     public Patient() {
     }
 
-    public Patient(int id, String patientName, String userName, String password, String address, String bloodgp, String gender, int age, String contact) {
+    public Patient(int id, String patientName, String userName, String password, String address, String bloodgp, String gender, String dob, String contact) {
         this.id = id;
         this.patientName = patientName;
         this.userName = userName;
@@ -22,18 +22,18 @@ public class Patient {
         this.address = address;
         this.bloodgp = bloodgp;
         this.gender = gender;
-        this.age = age;
+        this.dob = dob;
         this.contact = contact;
     }
 
-    public Patient(String patientName, String userName, String password, String address, String bloodgp, String gender, int age, String contact) {
+    public Patient(String patientName, String userName, String password, String address, String bloodgp, String gender, String dob, String contact) {
         this.patientName = patientName;
         this.userName = userName;
         this.password = password;
         this.address = address;
         this.bloodgp = bloodgp;
         this.gender = gender;
-        this.age = age;
+        this.dob = dob;
         this.contact = contact;
     }
 
@@ -93,12 +93,12 @@ public class Patient {
         this.gender = gender;
     }
 
-    public int getAge() {
-        return age;
+    public String getDob() {
+        return dob;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 
     public String getContact() {

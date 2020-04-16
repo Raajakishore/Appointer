@@ -45,90 +45,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed1" />
 
-    <!--<TextView
+
+    <Button
+        android:id="@+id/tt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/lv1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="368dp"
+        android:text="SUBMIT"
+        android:textColor="#989696"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/tt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:text="CLICK HERE"
-        android:textColor="#2196F3"
-        app:layout_constraintStart_toEndOf="@+id/tt2"
-        app:layout_constraintTop_toBottomOf="@+id/ed2" />
--->
-
-    <RelativeLayout
-        android:layout_width="468dp"
-        android:layout_height="399dp"
-        android:layout_marginTop="408dp"
+        android:layout_below="@+id/tt2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="64dp"
+        android:text="SIGN UP"
+        android:textColor="#989696"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/tt2" />
 
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_toEndOf="@+id/lv2"
-            android:textSize="24sp"
-            tools:layout_editor_absoluteX="389dp"
-            tools:layout_editor_absoluteY="571dp" />
-
-        <com.example.myapplication.LineView
-            android:id="@+id/lv2"
-            android:layout_width="156dp"
-            android:layout_height="10dp"
-            tools:ignore="MissingConstraints" />
-
-        <com.example.myapplication.LineView
-            android:id="@+id/lv1"
-            android:layout_width="150dp"
-            android:layout_height="15dp"
-            android:layout_alignEnd="@+id/textView8"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="56dp"
-            android:layout_marginEnd="-207dp"
-            android:layout_marginBottom="384dp"
-            android:layout_toEndOf="@+id/textView8"
-            tools:ignore="MissingConstraints" />
-
-        <Button
-            android:id="@+id/tt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/lv1"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="165dp"
-            android:text="SUBMIT"
-            android:textColor="#989696"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/tt3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tt2"
-            android:layout_alignEnd="@+id/lv1"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="151dp"
-            android:layout_marginTop="96dp"
-            android:layout_marginEnd="163dp"
-            android:text="SIGN UP"
-            android:textColor="#989696"
-            android:textSize="18sp" />
-    </RelativeLayout>
-
-    <!--        app:layout_constraintEnd_toStartOf="@+id/textView8"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    />
-    <!--        app:layout_constraintStart_toEndOf="@+id/textView8"-->
-<!--        app:layout_constraintTop_toTopOf="parent" -->
-    />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="20dp"
+        android:text="OR"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tt3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tt2"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

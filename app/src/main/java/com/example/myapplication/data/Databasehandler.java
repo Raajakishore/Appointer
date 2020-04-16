@@ -24,15 +24,18 @@ public class Databasehandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String create_table = "CREATE TABLE " + constants.TABLE_NAME + "("
+
+        Log.d("eeeeee", "onCreate: ");
+        String create_table = "CREATE TABLE " + constants.TABLE_NAME1 + "("
                 + constants.KEY_ID + " INTEGER PRIMARY KEY,"
                 + constants.KEY_USERNAME + " TEXT,"
                 + constants.KEY_PATIENTNAME + " TEXT,"
                 + constants.PASSWORD + " TEXT,"
                 + constants.ADDRESS + " TEXT,"
-                + constants.AGE + " NUMBER,"
-                + constants.BLOODGRP + "TEXT,"
-                + constants.CONTACT + "TEXT);";
+                + constants.AGE + " TEXT,"
+                + constants.GENDER + " TEXT,"
+                + constants.BLOODGRP + " TEXT,"
+                + constants.CONTACT + " TEXT);";
         db.execSQL(create_table);
 
     }
@@ -40,31 +43,50 @@ public class Databasehandler extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        db.execSQL("DROP TABLE IF EXISTS " + constants.TABLE_NAME);
+       db.execSQL("DROP TABLE IF EXISTS " + constants.TABLE_NAME1);
         onCreate(db);
 
 
     }
 
+//        Log.d("deletion", "de: ");
+//        db.execSQL("DROP TABLE IF EXISTS " + constants.TABLE_NAME1);
+//    }
+
     public void addPatient(Patient patient) {
+//        String create_table = "CREATE TABLE " + constants.TABLE_NAME1 + "("
+//            + constants.KEY_ID + " INTEGER PRIMARY KEY,"
+//            + constants.KEY_USERNAME + " TEXT,"
+//            + constants.KEY_PATIENTNAME + " TEXT,"
+//            + constants.PASSWORD + " TEXT,"
+//            + constants.ADDRESS + " TEXT,"
+//            + constants.AGE + " TEXT,"
+//            + constants.GENDER + "TEXT,"
+//            + constants.BLOODGRP + "TEXT,"
+//            + constants.CONTACT + "TEXT);";
+
         SQLiteDatabase db = this.getWritableDatabase();
+//   db.execSQL("DROP TABLE IF EXISTS " + constants.TABLE_NAME11);
+//        db.execSQL(create_table);
+        onUpgrade(db,5,6);
         ContentValues values = new ContentValues();
-        values.put(constants.KEY_USERNAME, patient.getUserName());
+        values.put(constants.KEY_USERNAME, patient.getContact());
         values.put(constants.KEY_PATIENTNAME, patient.getPatientName());
         values.put(constants.PASSWORD, patient.getPassword());
         values.put(constants.ADDRESS, patient.getAddress());
-        values.put(constants.BLOODGRP, patient.getBloodgp());
+        values.put(constants.AGE, patient.getDob());
         values.put(constants.GENDER, patient.getGender());
+        values.put(constants.BLOODGRP, patient.getBloodgp());
         values.put(constants.CONTACT, patient.getContact());
-        values.put(constants.AGE, patient.getAge());
 
-        db.insert(constants.TABLE_NAME, null, values);
-        Log.d("insertion", "addPatient: "+values);
+
+        db.insert(constants.TABLE_NAME1, null, values);
+        Log.d("inseeertion", "addPatient: "+values);
     }
 
     public Patient getPatient(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(constants.TABLE_NAME,
+        Cursor cursor = db.query(constants.TABLE_NAME1,
                 new String[]{constants.KEY_ID, constants.KEY_USERNAME, constants.KEY_PATIENTNAME, constants.PASSWORD,
                         constants.AGE, constants.CONTACT, constants.ADDRESS, constants.BLOODGRP, constants.GENDER},
                 constants.KEY_ID + "=?",
@@ -77,7 +99,7 @@ public class Databasehandler extends SQLiteOpenHelper {
             patient.setUserName(cursor.getString(cursor.getColumnIndex(constants.KEY_USERNAME)));
             patient.setPassword(cursor.getString(cursor.getColumnIndex(constants.PASSWORD)));
             patient.setPatientName(cursor.getString(cursor.getColumnIndex(constants.KEY_PATIENTNAME)));
-            patient.setAge(Integer.parseInt(cursor.getString(cursor.getColumnIndex(constants.AGE))));
+            patient.setDob(cursor.getString(cursor.getColumnIndex(constants.AGE)));
             patient.setAddress(cursor.getString(cursor.getColumnIndex(constants.ADDRESS)));
             patient.setBloodgp(cursor.getString(cursor.getColumnIndex(constants.BLOODGRP)));
             patient.setGender(cursor.getString(cursor.getColumnIndex(constants.GENDER)));
@@ -91,7 +113,7 @@ public class Databasehandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         List<Patient> patientlist = new ArrayList<>();
 
-        Cursor cursor = db.query(constants.TABLE_NAME,
+        Cursor cursor = db.query(constants.TABLE_NAME1,
                 new String[]{constants.KEY_ID, constants.KEY_USERNAME, constants.KEY_PATIENTNAME, constants.PASSWORD,
                         constants.AGE, constants.CONTACT, constants.ADDRESS, constants.BLOODGRP, constants.GENDER}, null,
                  null, null, null, null);
@@ -102,7 +124,7 @@ public class Databasehandler extends SQLiteOpenHelper {
                         patient.setUserName(cursor.getString(cursor.getColumnIndex(constants.KEY_USERNAME)));
                         patient.setPassword(cursor.getString(cursor.getColumnIndex(constants.PASSWORD)));
                         patient.setPatientName(cursor.getString(cursor.getColumnIndex(constants.KEY_PATIENTNAME)));
-                        patient.setAge(Integer.parseInt(cursor.getString(cursor.getColumnIndex(constants.AGE))));
+                        patient.setDob(cursor.getString(cursor.getColumnIndex(constants.AGE)));
                         patient.setAddress(cursor.getString(cursor.getColumnIndex(constants.ADDRESS)));
                         patient.setBloodgp(cursor.getString(cursor.getColumnIndex(constants.BLOODGRP)));
                         patient.setGender(cursor.getString(cursor.getColumnIndex(constants.GENDER)));
@@ -122,30 +144,30 @@ public class Databasehandler extends SQLiteOpenHelper {
     public int updatePatient(Patient patient){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values=new ContentValues();
-        values.put(constants.KEY_USERNAME, patient.getUserName());
+        values.put(constants.KEY_USERNAME, patient.getContact());
         values.put(constants.KEY_PATIENTNAME, patient.getPatientName());
         values.put(constants.PASSWORD, patient.getPassword());
         values.put(constants.ADDRESS, patient.getAddress());
         values.put(constants.BLOODGRP, patient.getBloodgp());
         values.put(constants.GENDER, patient.getGender());
         values.put(constants.CONTACT, patient.getContact());
-        values.put(constants.AGE, patient.getAge());
+        values.put(constants.AGE, patient.getDob());
 
 
 
 
-        return db.update(constants.TABLE_NAME,values,constants.KEY_ID+"?=",new String[]{String.valueOf(patient.getId())});
+        return db.update(constants.TABLE_NAME1,values,constants.KEY_ID+"?=",new String[]{String.valueOf(patient.getId())});
 
     }
     public void deletePatient(int id){
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(constants.TABLE_NAME,constants.KEY_ID+"=?",new String[]{String.valueOf(id)});
+        db.delete(constants.TABLE_NAME1,constants.KEY_ID+"=?",new String[]{String.valueOf(id)});
         db.close();
     }
 
     public int getCount(){
         SQLiteDatabase db = this.getReadableDatabase();
-        String s="SELECT * FROM "+constants.TABLE_NAME;
+        String s="SELECT * FROM "+constants.TABLE_NAME1;
         Cursor cursor= db.rawQuery(s,null);
 
         return cursor.getCount();
@@ -153,10 +175,10 @@ public class Databasehandler extends SQLiteOpenHelper {
     public Patient login(String username,String password){
         SQLiteDatabase db=this.getReadableDatabase();
         Patient patient=new Patient();
-        Cursor cursor = db.query(constants.TABLE_NAME,
+        Cursor cursor = db.query(constants.TABLE_NAME1,
                 new String[]{constants.KEY_ID, constants.KEY_USERNAME, constants.KEY_PATIENTNAME, constants.PASSWORD,
                         constants.AGE, constants.CONTACT, constants.ADDRESS, constants.BLOODGRP, constants.GENDER},
-                constants.KEY_USERNAME+ "=? "+"and"+constants.PASSWORD+"=?",
+                constants.KEY_USERNAME+ "=? "+"and " +constants.PASSWORD+"=?",
                 new String[]{username,password}, null, null, null, null);
 
         if(cursor.moveToFirst()){
@@ -165,7 +187,7 @@ public class Databasehandler extends SQLiteOpenHelper {
                 patient.setUserName(cursor.getString(cursor.getColumnIndex(constants.KEY_USERNAME)));
                 patient.setPassword(cursor.getString(cursor.getColumnIndex(constants.PASSWORD)));
                 patient.setPatientName(cursor.getString(cursor.getColumnIndex(constants.KEY_PATIENTNAME)));
-                patient.setAge(Integer.parseInt(cursor.getString(cursor.getColumnIndex(constants.AGE))));
+                patient.setDob(cursor.getString(cursor.getColumnIndex(constants.AGE)));
                 patient.setAddress(cursor.getString(cursor.getColumnIndex(constants.ADDRESS)));
                 patient.setBloodgp(cursor.getString(cursor.getColumnIndex(constants.BLOODGRP)));
                 patient.setGender(cursor.getString(cursor.getColumnIndex(constants.GENDER)));
