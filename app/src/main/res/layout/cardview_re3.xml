@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/card_view_appointment"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="5dp"
+
+        app:cardCornerRadius="12dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/namee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/amaranth"
+            android:textColor="@color/black"
+android:text="Vaani Clinics"
+android:padding="10dp"
+            android:textSize="20sp" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/number_of_departments"-->
+<!--                android:layout_below="@+id/namee"-->
+<!--                android:layout_marginLeft="7dp"-->
+<!--                android:text="1 department(s)"-->
+<!--                android:textSize="15sp"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:id="@+id/number_of_doctors"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toRightOf="@+id/number_of_departments"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:layout_below="@+id/namee"-->
+<!--                android:text="2 Doctor(s)"-->
+<!--                android:textSize="15sp"-->
+<!--                android:layout_marginTop="1dp"/>-->
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

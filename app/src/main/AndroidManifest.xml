@@ -1,31 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:name=".model.Lists"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/hospital"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".util.Main9Activity"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".Main8Activity"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
-            android:name=".util.ui.slideshow.Main5Activity"
-            android:label="@string/title_activity_main5"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Main4Activity" />
-        <activity android:name=".Main3Activity" />
+            android:name=".Main7Activity"
+            tools:ignore="LockedOrientationActivity"
+             />
+        <activity android:name=".Main6Activity"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".Main5Activity"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".Book_appointment"
+            android:label="@string/title_activity_book_appointment"
+            android:theme="@style/AppThemes"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".Main4Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemes"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Main3Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemes"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
+
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemes"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemes"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

@@ -5,105 +5,268 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main3Activity">
-    <include
-        layout="@layout/toolbar"
-
-        />
 
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:textColor="@color/colorAcent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
+<!--    <include-->
+<!--        android:id="@+id/include"-->
+<!--        layout="@layout/toolbar2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:layout_editor_absoluteY="1dp" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:ems="10"
-        android:hint="Create Password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Address"
-        android:inputType="textPersonName"
-        android:textColor="@color/colorAcent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/contact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="Phone number"
-        android:inputType="textPersonName"
-        android:textColor="@color/colorAcent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+            <ImageButton
+                android:id="@+id/profile_image"
+                android:layout_width="88dp"
+                android:layout_height="94dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_account_circle_grey_24dp">
 
-    <Button
-        android:id="@+id/save"
-        android:layout_width="215dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="24dp"
-        android:text="SAVE"
-        android:textColor="@color/colorAcent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contact" />
+            </ImageButton>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:textColor="@color/colorAcent"
+    android:id="@+id/nami"/>
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="213dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address" />
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:background="@drawable/rf"
+                android:paddingLeft="10dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="215dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cal" />
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName"
 
-    <TextView
-        android:id="@+id/cal"
-        android:layout_width="212dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
-        android:hint="DOB"
-        android:textColor="@color/colorAcent"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:background="@drawable/rf"
+
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+            <TextView
+                android:id="@+id/dontmatch"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAcent"
+
+                ></TextView>
+
+            <EditText
+                android:id="@+id/CONFIRMpassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rf"
+                android:paddingLeft="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:layout_marginTop="0dp"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAcent"
+                android:id="@+id/adresi"/>
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/rf"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+
+                android:ems="10"
+                android:hint="Address"
+                android:inputType="textPersonName"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAcent"
+                android:id="@+id/citi"/>
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/rf"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+
+                android:ems="10"
+                android:hint="City"
+                android:inputType="textPersonName"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:background="@drawable/rf"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAcent"
+                android:layout_marginTop="12dp"
+                android:id="@+id/phoni"/>
+            <EditText
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/rf"
+                android:layout_marginStart="20dp"
+android:layout_marginEnd="@dimen/dimen_20dp"
+
+                android:ems="10"
+                android:hint="Phone number"
+                android:inputType="textPersonName"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+
+
+
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:background="@drawable/rf"
+
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cal" />
+
+<TextView
+    android:layout_width="match_parent"
+    android:id="@+id/ll"
+    android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/rf"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:layout_marginTop="20dp"
+                android:autofillHints="Gender"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="92dp"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:text="Sign Up"
+                android:textColor="@color/colorAcent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.347"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contact" />
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressbar3"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

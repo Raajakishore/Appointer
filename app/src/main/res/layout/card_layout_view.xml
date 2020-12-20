@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/card_view_appointment"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="5dp"
+
+        app:cardCornerRadius="12dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/namee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/amaranth"
+                android:textColor="@color/black"
+
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namee"
+                android:id="@+id/Department"
+                android:text="Oncology"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="7dp"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/hospital_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Department"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/duru_sans"
+                android:text="VAANI HOSPITALS"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hospital_name"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:progressTint="#4C8073"
+
+                />
+
+            <TextView
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hospital_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/ratingBar2"
+                android:text="5.0"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

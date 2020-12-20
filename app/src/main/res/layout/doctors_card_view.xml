@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="12dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/doctors_photo"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:src="@drawable/ic_account_circle_grey_24dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/doctors_name"
+                android:layout_toEndOf="@+id/doctors_photo"
+                android:text="Chandrasekaran"
+                android:gravity="clip_vertical"
+                android:textSize="25dp"
+                android:layout_marginLeft="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/department_namee"
+                android:textSize="15dp"
+                android:layout_below="@+id/doctors_name"
+                android:layout_toRightOf="@id/doctors_photo"
+                android:text="Oncology"
+                android:layout_marginLeft="15dp"
+                android:maxLines="1"/>
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/department_namee"
+                android:id="@+id/doctors_stars"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/doctors_photo"
+                android:stepSize="0.5"
+                style="?android:attr/ratingBarStyleSmall" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rating"
+                android:layout_toRightOf="@id/doctors_stars"
+                android:layout_below="@id/department_namee"
+                android:text="4.5"
+                android:layout_marginLeft="5dp"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>

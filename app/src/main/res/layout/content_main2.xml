@@ -9,30 +9,42 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="172dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="136dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
         android:fontFamily="@font/chewy"
-        android:text="SATHYAM"
+        android:text="APPOINTER"
         android:textColor="#F84F4F"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.332"
+        app:layout_constraintHorizontal_bias="0.359"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="  SATHYAM" />
+
+    <TextView
+        android:id="@+id/incorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="180dp"
+        android:maxLines="1"
+        android:textColor="@color/colorAcent"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/ed1"
         android:layout_width="245dp"
         android:layout_height="59dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="220dp"
         android:ems="10"
-        android:hint="Username or Phonenumber"
+        android:hint="Email"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/ed2"
@@ -46,6 +58,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed1" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:id="@+id/forgot"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="356dp"
+        android:text="Forgot password?"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/tt2"
@@ -53,10 +76,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="368dp"
-        android:text="SUBMIT"
-        android:textColor="#989696"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="376dp"
+        android:background="@android:color/transparent"
+        android:text="Login"
+        android:textColor="@color/colorAcent"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -70,8 +94,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="136dp"
         android:layout_marginTop="64dp"
-        android:text="SIGN UP"
-        android:textColor="#989696"
+        android:text="Sign Up"
+        android:textColor="@color/colorAcent"
+        android:background="@android:color/transparent"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tt2" />
@@ -88,6 +113,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tt2"
         app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/progressBar30"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tt3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

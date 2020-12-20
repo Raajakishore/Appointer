@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/card_view_appointment"
+        android:layout_height="180dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="12dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/duru_sans"
+                android:text="11:45 AM"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dimen_20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginRight="17dp"
+                android:id="@+id/tokenn"
+                android:layout_height="wrap_content"
+                android:text="Token : 5"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/confirmed"
+                android:layout_marginTop="10dp" />
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/checke"
+                android:layout_height="30dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="25dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Confirmed"
+                android:id="@+id/confirmed"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:layout_toRightOf="@+id/checke"
+                android:layout_marginLeft="10dp"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:id="@+id/doctor_name"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/confirmed"
+    android:text="ABC DEF GHI"
+    android:layout_marginLeft="25dp"
+    android:textSize="@dimen/dimen_20dp"
+    android:textColor="@color/colorPrimary"
+    />
+
+            <TextView
+                android:id="@+id/hospital_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_name"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/amaranth"
+                android:layout_marginTop="10dp"
+                android:text="MADURAI ARUPPUKOTTAI"
+                android:textSize="@dimen/dimen_20dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                android:layout_marginLeft="25dp"
+                android:textSize="15dp"
+                android:text="4 May,2020"
+                android:layout_alignParentBottom="true"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:text=""
+    android:textColor="@color/colorAcent"
+    android:textSize="20dp"
+    android:id="@+id/cancel"
+    android:layout_marginRight="40dp"/>
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

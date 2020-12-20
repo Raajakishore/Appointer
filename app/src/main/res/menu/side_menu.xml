@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-     <item
-         android:title="Add appointment"
-         android:icon="@drawable/ic_add_black_24dp"
-         android:id="@+id/add"
-         app:showAsAction="always"
-         />
-     <item
-          android:title="Settings"
-          android:id="@+id/settings"
-          app:showAsAction="never"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<!--     <item-->
+<!--         android:title="Add appointment"-->
+<!--         android:icon="@drawable/ic_add_black_24dp"-->
+<!--         android:id="@+id/add"-->
+<!--         app:showAsAction="always"-->
+<!--         />-->
+
+<!--     <item-->
+<!--         android:title="Share"-->
+<!--         android:id="@+id/share"-->
+<!--         app:showAsAction="never"-->
+<!--         android:icon="@drawable/ic_share_black_24dp"/>-->
      <item
           android:title="Log Out"
           android:id="@+id/logout"
-          app:showAsAction="never"/>
+          app:showAsAction="never"
+         android:icon="@drawable/ic_delete_black_24dp"/>
 </menu>

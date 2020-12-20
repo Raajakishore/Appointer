@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main7Activity">
+
+    <TextView
+        android:id="@+id/eee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="Appointment"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/eee"
+        android:id="@+id/l"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorPrimaryDark"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hspi"
+        android:layout_below="@+id/l"
+        android:layout_marginTop="@dimen/dimen_40dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="15dp"
+        android:text="Date"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l"
+        android:layout_marginLeft="167dp"
+        android:text="Time"
+        android:textSize="15dp"
+        android:layout_marginTop="@dimen/dimen_40dp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tim"
+        android:layout_below="@+id/l"
+        android:layout_marginTop="@dimen/dimen_40dp"
+        android:id="@+id/edit"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/ic_mode_edit_black_24dp"
+        android:background="@android:color/transparent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/hspi"
+        android:text="20-05-2020"
+        android:id="@+id/dat"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen_20dp"
+        android:layout_below="@+id/hspi"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tim"
+        android:layout_toRightOf="@+id/dat"
+        android:text="9:00 - 10:00 AM "
+        android:layout_marginLeft="50dp"
+        />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/dat"
+    android:layout_marginTop="20dp"
+    android:id="@+id/dep"
+    android:text="Oncology"
+    android:textSize="15dp"
+    android:layout_marginLeft="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Token"
+        android:textSize="15dp"
+        android:id="@+id/t"
+        android:layout_marginLeft="167dp"
+        android:layout_below="@+id/tim"
+        android:layout_marginTop="@dimen/dimen_20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Jianna E"
+        android:textSize="@dimen/dimen_20dp"
+        android:layout_below="@id/dep"
+        android:id="@+id/doc"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/black"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="10"
+    android:textSize="@dimen/dimen_20dp"
+    android:textColor="@color/black"
+    android:layout_below="@+id/t"
+    android:layout_marginTop="10dp"
+    android:id="@+id/ee"
+    android:layout_marginLeft="167dp"
+    />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:id="@+id/rr"
+        android:layout_below="@+id/ee">
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/book_appointmen"
+        android:background="@layout/rounded_border"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+
+        android:padding="8dp"
+        android:text="Book Appointment"
+        android:textColor="#ffffff"
+        android:elevation="10dp"
+        android:textSize="15sp" />
+
+
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/rr"
+android:layout_marginTop="50dp"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -2,68 +2,94 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="12dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true"
         app:cardElevation="10dp"
         app:contentPadding="8dp"
         android:paddingBottom="8dp"
-    android:layout_marginBottom="15dp"
-
+        android:layout_marginBottom="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="156dp">
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="156dp">-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/hospitalname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
-                android:text="ABC HOSPITAL"
-                android:textColor="@color/colorAcent"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/circular_view"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/ic_account_circle_grey_24dp" />
+<!--            <TextView-->
+<!--                android:id="@+id/hospitalname"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="28dp"-->
+<!--                android:text="ABC HOSPITAL"-->
+<!--                android:textColor="@color/colorAcent"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/circular_view"
+        android:textSize="20dp"
+        android:text="name"/>
+    <!--            <TextView-->
+<!--                android:id="@+id/Appoinmentdate"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="96dp"-->
+<!--                android:text="1/1/2020"-->
+<!--                android:textColor="#2196F3"-->
+<!--                android:textSize="24sp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+<TextView
+    android:layout_width="match_parent"
+    android:id="@+id/stars"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/name"
+    android:paddingLeft="28dp"
+    android:text="Stars"
+    android:layout_marginBottom="0dp"
+    android:textSize="10dp"
+    />
+<!--            <TextView-->
+<!--                android:id="@+id/Appoinmenttime"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="156dp"-->
+<!--                android:layout_marginTop="96dp"-->
+<!--                android:text="12:00AM"-->
+<!--                android:textColor="#2196F3"-->
+<!--                android:textSize="24sp"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/Appoinmentdate"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-            <TextView
-                android:id="@+id/Appoinmentdate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="96dp"
-                android:text="1/1/2020"
-                android:textColor="#2196F3"
-                android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView2"-->
+<!--                android:layout_width="72dp"-->
+<!--                android:layout_height="33dp"-->
+<!--                android:layout_marginStart="304dp"-->
+<!--                android:layout_marginTop="28dp"-->
+<!--                android:src="@drawable/ic_delete_black_24dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                tools:ignore="VectorDrawableCompat" />-->
 
-            <TextView
-                android:id="@+id/Appoinmenttime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="156dp"
-                android:layout_marginTop="96dp"
-                android:text="12:00AM"
-                android:textColor="#2196F3"
-                android:textSize="24sp"
-                app:layout_constraintStart_toEndOf="@+id/Appoinmentdate"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="72dp"
-                android:layout_height="33dp"
-                android:layout_marginStart="304dp"
-                android:layout_marginTop="28dp"
-                android:src="@drawable/ic_delete_black_24dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="VectorDrawableCompat" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

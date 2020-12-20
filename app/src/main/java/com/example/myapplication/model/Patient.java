@@ -1,50 +1,58 @@
 package com.example.myapplication.model;
 
+import android.net.Uri;
+
 public class Patient {
-    private int id;
+
     private String patientName;
-    private String userName;
+
     private String password;
+    private  String city;
+    private String email;
+    private String imageUri;
     private String address;
-    private String bloodgp;
+
+    String District;
+
+    public String getDistrict() {
+        return District;
+    }
+
+    public void setDistrict(String district) {
+        District = district;
+    }
+
     private String gender;
-    private String dob;
     private String contact;
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+
+    public String getImageUri() {
+        return imageUri;
+    }
+
+    public void setImageUri(String imageUri) {
+        this.imageUri = imageUri;
+    }
+
+
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public Patient() {
     }
-
-    public Patient(int id, String patientName, String userName, String password, String address, String bloodgp, String gender, String dob, String contact) {
-        this.id = id;
-        this.patientName = patientName;
-        this.userName = userName;
-        this.password = password;
-        this.address = address;
-        this.bloodgp = bloodgp;
-        this.gender = gender;
-        this.dob = dob;
-        this.contact = contact;
-    }
-
-    public Patient(String patientName, String userName, String password, String address, String bloodgp, String gender, String dob, String contact) {
-        this.patientName = patientName;
-        this.userName = userName;
-        this.password = password;
-        this.address = address;
-        this.bloodgp = bloodgp;
-        this.gender = gender;
-        this.dob = dob;
-        this.contact = contact;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getPatientName() {
         return patientName;
     }
@@ -53,13 +61,9 @@ public class Patient {
         this.patientName = patientName;
     }
 
-    public String getUserName() {
-        return userName;
-    }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+
+
 
     public String getPassword() {
         return password;
@@ -76,15 +80,6 @@ public class Patient {
     public void setAddress(String address) {
         this.address = address;
     }
-
-    public String getBloodgp() {
-        return bloodgp;
-    }
-
-    public void setBloodgp(String bloodgp) {
-        this.bloodgp = bloodgp;
-    }
-
     public String getGender() {
         return gender;
     }
@@ -93,13 +88,8 @@ public class Patient {
         this.gender = gender;
     }
 
-    public String getDob() {
-        return dob;
-    }
 
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
+
 
     public String getContact() {
         return contact;

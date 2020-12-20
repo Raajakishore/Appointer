@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/allerta_stencil</item>
+        <item>@font/amaranth</item>
+        <item>@font/duru_sans</item>
+        <item>@font/montserrat</item>
+        <item>@font/playfair_display</item>
+        <item>@font/poppins_light</item>
+        <item>@font/roboto_bold</item>
+    </array>
+</resources>
